@@ -158,6 +158,20 @@ public class DishServiceImpl implements DishService {
         // 将dishDTO导入dish
         BeanUtils.copyProperties(dishDTO, dish);
         dishMapper.update(dish);
+    }
 
+    /**
+     * 菜品的启用和禁用
+     * @param status
+     * @param id
+     */
+    public void startOrStop(Integer status, Long id) {
+        // update dish set status = ? where id = ?
+
+        Dish dish = Dish.builder()
+                .status(status)
+                .id(id)
+                .build();
+        dishMapper.update(dish);
     }
 }

@@ -90,4 +90,18 @@ public class DishController {
         dishService.update(dishDTO);
         return Result.success();
     }
+
+    /**
+     * 菜品的启用和禁用
+     * @param status
+     * @param id
+     * @return
+     */
+    @PostMapping("/status/{status}")
+    @ApiOperation("菜品的启用和禁用")
+    public Result startOrStop(@PathVariable Integer status, Long id){
+        log.info("菜品启用和禁用: {}, {}", status, id);
+        dishService.startOrStop(status, id);
+        return Result.success();
+    }
 }
