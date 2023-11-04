@@ -2,6 +2,7 @@ package com.sky.service.impl;
 
 import com.github.pagehelper.Page;
 import com.github.pagehelper.PageHelper;
+import com.sky.annotation.AutoFill;
 import com.sky.constant.MessageConstant;
 import com.sky.constant.StatusConstant;
 import com.sky.dto.DishDTO;
@@ -143,5 +144,20 @@ public class DishServiceImpl implements DishService {
         List<DishFlavor> flavors = dishFlavorMapper.getFlavors(id);
         dishVO.setFlavors(flavors);
         return dishVO;
+    }
+
+    /**
+     * 修改菜品
+     * @param dishDTO
+     */
+    public void update(DishDTO dishDTO) {
+        // 获取当前id的dish对象
+        Long id = dishDTO.getId();
+        Dish dish = dishMapper.getById(id);
+
+        // 将dishDTO导入dish
+        BeanUtils.copyProperties(dishDTO, dish);
+        dishMapper.update(dish);
+
     }
 }
