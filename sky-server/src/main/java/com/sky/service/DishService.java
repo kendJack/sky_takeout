@@ -33,13 +33,13 @@ public interface DishService {
      * @param id
      * @return
      */
-    DishVO getById(Long id);
+    DishVO getByIdWithFlavor(Long id);
 
     /**
      * 修改菜品
      * @param dishDTO
      */
-    void update(DishDTO dishDTO);
+    void updateWithFlavor(DishDTO dishDTO);
 
     /**
      * 菜品的启用和禁用

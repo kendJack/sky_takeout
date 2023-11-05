@@ -74,7 +74,7 @@ public class DishController {
     @ApiOperation("根据id查询菜品")
     public Result<DishVO> getById(@PathVariable Long id){
         log.info("根据id查询菜品: {}", id);
-        DishVO dishVO = dishService.getById(id);
+        DishVO dishVO = dishService.getByIdWithFlavor(id);
         return Result.success(dishVO);
     }
 
@@ -87,7 +87,7 @@ public class DishController {
     @ApiOperation("修改菜品")
     public Result update(@RequestBody DishDTO dishDTO){
         log.info("修改菜品: {}", dishDTO);
-        dishService.update(dishDTO);
+        dishService.updateWithFlavor(dishDTO);
         return Result.success();
     }
 
