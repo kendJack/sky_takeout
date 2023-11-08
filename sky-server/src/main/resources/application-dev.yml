@@ -11,3 +11,8 @@ sky:
     access-key-id: LTAI5tDL3TiDjLJZnnTQGX7w
     access-key-secret: il5TRsjDPUTlD0SHuBG8FOhat3qpSE
     bucket-name: sky-take-out-kendrick
+  redis:
+    host: centos
+    password: 123321
+    port: 6379
+    database: 10
