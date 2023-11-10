@@ -47,13 +47,13 @@
         select * from dish
         <where>
             <if test="name != null">
-                and name like concat('%', #{name}, '%'),
+                and name like concat('%', #{name}, '%')
             </if>
             <if test="categoryId != null">
-                and category_Id = #{categoryId},
+                and category_Id = #{categoryId}
             </if>
             <if test="status != null">
-                status = #{status}
+                and status = #{status}
             </if>
         </where>
         order by create_time desc
