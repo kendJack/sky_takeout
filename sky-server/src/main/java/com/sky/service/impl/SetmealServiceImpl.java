@@ -86,9 +86,15 @@ public class SetmealServiceImpl implements SetmealService {
         return setmealVO;
     }
 
-    @Override
+    /**
+     * 条件查询
+     * @param setmeal
+     * @return
+     */
     public List<Setmeal> list(Setmeal setmeal) {
-        return null;
+
+        List<Setmeal> setmealList = setmealMapper.list(setmeal);
+        return setmealList;
     }
 
     /**

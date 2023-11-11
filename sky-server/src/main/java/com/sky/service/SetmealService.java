@@ -19,7 +19,7 @@ public interface SetmealService {
     void saveWithDishes(SetmealDTO setmealDTO);
 
     /**
-     *
+     * 条件查询
      * @param setmeal
      * @return
      */
