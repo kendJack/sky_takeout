@@ -33,7 +33,6 @@ public class ShoppingCartServiceImpl implements ShoppingCartService {
      * 添加购物车
      * @param shoppingCartDTO
      */
-    @Override
     public void addShoppingCart(ShoppingCartDTO shoppingCartDTO) {
         // 判断当前加入到购物车里的商品是否已经存在了
         ShoppingCart shoppingCart = new ShoppingCart();
@@ -71,6 +70,20 @@ public class ShoppingCartServiceImpl implements ShoppingCartService {
             shoppingCart.setCreateTime(LocalDateTime.now());
             shoppingCartMapper.insert(shoppingCart);
         }
+    }
 
+    /**
+     * 查看购物车
+     * @return
+     */
+    public List<ShoppingCart> showShoppingCart() {
+        // 获取到当前微信用户的id
+        Long userId = BaseContext.getCurrentId();
+        ShoppingCart shoppingCart = ShoppingCart.builder()
+                .userId(userId)
+                .build();
+
+        List<ShoppingCart> list = shoppingCartMapper.list(shoppingCart);
+        return list;
     }
 }
