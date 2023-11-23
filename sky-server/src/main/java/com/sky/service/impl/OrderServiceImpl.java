@@ -575,7 +575,7 @@ public class OrderServiceImpl implements OrderService {
         Integer distance = (Integer) ((JSONObject)jsonArray.get(0)).get("distance");
 
         if (distance > 10000){
-            // 配送距离超过5000米
+            // 配送距离超过10000米
             throw new OrderBusinessException("超出配送范围");
         }
     }
