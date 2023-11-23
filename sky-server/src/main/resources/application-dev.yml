@@ -26,3 +26,7 @@ sky:
       weChatPayCertFilePath: D:\pay\wechatpay_166D96F876F45C7D07CE98952A96EC980368ACFC.pem
       notifyUrl: https://312c3f3.r1.cpolar.top/notify/paySuccess
       refundNotifyUrl: https://312c3f3.r1.cpolar.top/notify/refundSuccess
+  shop:
+    address: 北京市海淀区上地十街10号
+  baidu:
+    ak: Yn58xGQt2m2xTlaBVLhNuRSYvfZhkXhS
