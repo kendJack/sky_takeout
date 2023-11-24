@@ -31,7 +31,7 @@ public class OrderTask {
 
         LocalDateTime time = LocalDateTime.now().plusMinutes(-15);
         // select * from orders where status = ? and order_time < (当前时间 - 15分钟)
-        List<Orders> ordersList = orderMapper.getByStatusAndOrderTimeLT(Orders.UN_PAID, time);
+        List<Orders> ordersList = orderMapper.getByStatusAndOrderTimeLT(Orders.PENDING_PAYMENT, time);
 
         if (ordersList != null && !ordersList.isEmpty()){
             for (Orders orders : ordersList) {
