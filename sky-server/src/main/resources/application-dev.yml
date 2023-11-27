@@ -24,8 +24,8 @@ sky:
       privateKeyFilePath: D:\pay\apiclient_key.pem
       apiV3Key: CZBK51236435wxpay435434323FFDuv3
       weChatPayCertFilePath: D:\pay\wechatpay_166D96F876F45C7D07CE98952A96EC980368ACFC.pem
-      notifyUrl: https://23ebc1fe.r16.cpolar.top/notify/paySuccess
-      refundNotifyUrl: https://23ebc1fe.r16.cpolar.top/notify/refundSuccess
+      notifyUrl: https://55b2c137.r17.cpolar.top/notify/paySuccess
+      refundNotifyUrl: https://55b2c137.r17.cpolar.top/notify/refundSuccess
   shop:
     address: 北京市海淀区上地十街10号
   baidu:
